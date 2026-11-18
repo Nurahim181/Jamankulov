@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>№75 Медет Жаманкулов</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #071b45, #0879bd);
+            color: white;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            padding: 25px;
+            background: rgba(0,0,0,0.25);
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .clock {
+            margin-top: 35px;
+            font-size: 25px;
+            color: #ffe66d;
+        }
+
+        .main {
+            padding: 60px 20px;
+        }
+
+        .main h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .main p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 550px;
+            margin: 30px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .card h2 {
+            color: #ffe66d;
+            margin-bottom: 15px;
+        }
+
+        .creator {
+            margin-top: 50px;
+            padding: 25px;
+            background: rgba(0,0,0,0.3);
+            font-size: 18px;
+        }
+
+        footer {
+            padding: 15px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        @media(max-width: 600px) {
+            .main h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🏫 №75 МЕДЕТ ЖАМАНКУЛОВ
+</header>
+
+<div class="clock">
+    🕒 <span id="time"></span>
+    <br>
+    <span id="date"></span>
+</div>
+
+<section class="main">
+    <h1>Кош келиңиздер!</h1>
+
+    <p>
+        Биздин мектептин расмий сайтына кош келиңиздер!
+        <br>
+        Билим — келечектин ачкычы!
+    </p>
+
+    <div class="card">
+        <h2>💻 Информатика сабагы</h2>
+
+        <p>
+            Информатика мугалими:
+            <br>
+            <strong>Мунара эже</strong>
+        </p>
+
+        <br>
+
+        <p>
+            Информатика — компьютер жана
+            технологиялар дүйнөсү!
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🌟 Биздин максат</h2>
+        <p>
+            Сапаттуу билим алуу,
+            жаңы технологияларды үйрөнүү
+            жана келечекке кадам таштоо!
+        </p>
+    </div>
+</section>
+
+<div class="creator">
+    ✨ Бул сайтты <strong>Нурахим</strong> жасады!
+</div>
+
+<footer>
+    © 2026 №75 Медет Жаманкулов
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+
+        document.getElementById("time").textContent =
+            now.toLocaleTimeString("ky-KG");
+
+        document.getElementById("date").textContent =
+            now.toLocaleDateString("ky-KG", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
